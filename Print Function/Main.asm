@@ -18,7 +18,7 @@ MOV       ES, AX
 MOV       BH, SETCHAR
 MOV       CX, STRINGLEN
 
-.PRINTCHAR:
+    .PRINTCHAR:
 MOV       BL, [DS:SI]
 INC       SI
 MOV       [ES:DI], BL
@@ -28,7 +28,7 @@ INC       DI
 OR        BL, NUL
 JZ        .RETURN
 LOOP      .PRINTCHAR
-.RETURN:
+    .RETURN:
 RET
 
 SAYHELLO  DB 'Hi there,I am SiberiaCat!'
