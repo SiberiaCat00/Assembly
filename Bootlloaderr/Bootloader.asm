@@ -26,7 +26,6 @@ section code align=16 vstart=0x7c00
   add ax, [cs:DESTMEN]
   adc dx, [cs:DESTMEN+2]
 
-
   mov si, 16
   div si
   mov [bx], ax
